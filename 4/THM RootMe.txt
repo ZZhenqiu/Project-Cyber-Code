@@ -1,0 +1,23 @@
+
+Ok, dans la lignée du premier jour, il s'agissait pour moi de refaire des vieux CTFs. 
+Je commence par les plus populaires car ce sont les premiers que j'ai tenté de résoudre, il y a environ 2 ans. 
+
+
+Je me souviens avoir eu énormément de difficultés sur ce challenge à l'époque, même avec un writeup, notamment car je ne comprenais pas le concept de reverse shell (comme je débutais, je recopiais les commandes, ce qui ne marche pas avec le reverse shell car il faut l'IP de l'attackBox actuelle et celle de la machine à root). 
+
+Bref, en revenant dessus 2 ans plus tard, le CTF est devenu trivial : 
+-nmap/gobuster
+-nous trouvons une page "uploads" qui servira plus tard et une page "panel",
+qui permet d'uploader des fichiers. 
+-on crée un rev shell, et un nc -nlvp
+-à l'upload, nous recevons un message interdisant les fichiers php. Nous avons donc essayé le null byte %00 (qui ne marche pas), puis d'autres extensions de php (qui marche). 
+-une fois le fichier déposé, nous l'ouvrons dans le folder "uploads". 
+-user.txt
+-comme nous n'avons pas de mdp, pas de sudo -l, mais nous constatons que /usr/bin/python2.7 a le bit SUID. Nous vérifions sur Gtfobins, et nous modifions légèrement la commande : ./python2.7 -c 'import os; os.execl("/bin/sh", "sh", "-p")' 
+-Voilà. 
+
+
+Maintenant, pour les idées de scripts. Nous avons déjà un nmap/dirb qui fonctionnent. Pas besoin d'améliorer le script pour l'instant (mais plus tard, oui). 
+-Une chose intéressante à faire cependant est d'utiliser l'output de gobuster pour reconstruire l'url, aller dessus et scrapper la page html pour retrouver un indicateur d'une possibilité d'upload de fichiers (nous ferons ça avec les autres vulnérabilités type LFI, XSS, SQLi plus tard quand ce sera necessaire). 
+-Si le script trouve une upload possible, va générer un script PentestMonkey (en utilisant l'IP fournie et en prenant par défaut un port, disons 9001). Voir si possible d'automatiser l'upload ou non. 
+-Faire un script qui lance une recherche SUID avec un scraping gtfobins.  
