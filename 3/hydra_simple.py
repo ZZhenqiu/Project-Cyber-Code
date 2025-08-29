@@ -56,6 +56,5 @@ C'est donc la raison de la protection pour ssh.
 Par défaut, Paramiko fait la même chose. Si la clé du serveur n'est pas déjà connue, il refuse la connexion. 
 Notre code permet ainsi d'ajouter automatiquent la clé du serveur si elle est inconnue (in fine, c'est comme si
 nous mettons "yes"). Comme nous nous mettons dans la peau d'un attaquant, nous pouvons accepter le risque. 
-
-
+Voilà.
 """
