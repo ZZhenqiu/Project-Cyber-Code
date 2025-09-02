@@ -1,0 +1,13 @@
+A la différence des deux premiers CTFs, c'était la première fois que j'ai essayé ce challenge. 
+Les  choses intéressantes pour futurs scripts : 
+
+-ajouter une fonction pour notre programme nmap qui, si ne trouve pas avec l'IP, remplit le fichier /etc/hosts. Il y a toutefois deux points à 
+prendre en compte. Le premier est la nécessité de mettre une IP et un nom d'hôte; le deuxième est le fait que c'est une méthode adaptée pour 
+Linux. Donc, ajouter une fonction qui effectue au préalable un scan/une commande pour détecter l'OS et ensuite adapter la commande. 
+
+-Créer un script qui permet d'énumérer les noms d'utilisateurs corrects. L'avantage de ce CTF, c'est de montrer la granularité et 
+l'adaptabilité des scripts maisons. En effet, la raison pour laquelle l'énumération de noms d'users est possible ici vient du message d'erreur, 
+qui est différent. En effet, avec un utilisateur incorrect, le message affiché sera "Wrong username or password" tandis qu'avec un nom d'user 
+correct (ici "admin"), nous avons "Wrong password". Nous utiliserons cette différence pour pouvoir trouver les users existants, puis brute force
+des credentials avec hydra. Notons enfin que cela est possible aussi car il n'y a pas de seuil d'erreur. Il n'y a pas de blocage au bout de 
+x nombre de tentatives, ce qui permet un brute force sommaire. 
