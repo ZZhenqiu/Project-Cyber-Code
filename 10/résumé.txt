@@ -1,0 +1,5 @@
+Ok, comme prévenu, nous nous sommes surtout focalisés sur la réalisation de CTF 
+puisque il y a un évènement. 
+
+Prochaine fois, penser à ajouter la détection d'OS pour nmap + version. 
+Et pour dirbuster, ajouter aussi une fonction de subdomain enumeration. 
