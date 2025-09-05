@@ -1,0 +1,5 @@
+Principalement du CTF aujourd'hui. 
+Comme c'est le dernier jour pour le boost d'exp, nous nous sommes principalement focalisés sur la réalisation. 
+
+Il y a eu beaucoup de CTF crypto résolus, mais c'est un domaine que je ne pense pas automatiser tout de suite. 
+Pour l'instant, c'est toujours des scripts au cas par cas. 
