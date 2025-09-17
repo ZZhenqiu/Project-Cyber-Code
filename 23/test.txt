@@ -1,0 +1,2 @@
+[2025-09-17 11:29:37] Bonjour;, ceci est un test.
+[2025-09-17 11:30:15] Je vois que je n'ai pas pris la touche suppr en compte. Il fqudrq y penser la prochaine fois
