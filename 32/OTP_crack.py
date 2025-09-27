@@ -86,7 +86,7 @@ Autres :
 C'était l'occasion d'utiliser un f string. 
 0 : ajoute des zéros si besoin
 4 : le nombre de caractères total
-d : décimal. 
+d : décimal
 
 Cela génère un code PIN de 0000 à 9999. Une boucle while ordinaire donnera : 
 0, 1, 2, 3 etc etc...
