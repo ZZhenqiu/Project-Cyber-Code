@@ -1,0 +1,12 @@
+Bon, nous avons décidé de nous concentrer sur l'obtention de l'OSCP. 
+Nous nous fixons une deadline de 4 mois : 
+-le premier mois sert à effectuer les CTFs conseillés dans la list de LainKusanagi
+-les 3 mois suivants serviront à compléter le cours de l'OSCP (vu que l'accès est limité à 3 mois)
+
+De ce fait, notre attention sera principalement sur les CTFs et la méthodologie. Nous continuerons
+d'ajouter des scripts de temps en temps lorsque cela peut être utile mais nous n'en feront pas un objectif quotidien. 
+
+Nous sommes le 29/09/2025. 
+L'objectif sera donc de passer l'OSCP fin janvier/début février 2026. 
+
+Nous reprendrons les scripts à un rythme plus régulier après. 
